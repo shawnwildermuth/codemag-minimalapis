@@ -1,6 +1,31 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+var bldr = WebApplication.CreateBuilder(args);
 
-app.MapGet("/", () => "Hello World!");
+bldr.Services.AddDbContext<JurisContext>();
+bldr.Services.AddTransient<IJurisRepository, JurisRepository>();
 
-app.Run();
+var app = bldr.Build();
+
+var loggerFactory = app.Services.GetService<ILoggerFactory>();
+var logger = loggerFactory?.CreateLogger<Program>();
+
+app.MapGet("/clients", 
+  async (IJurisRepository repo) => {
+    return await repo.GetClientsAsync();
+  });
+
+app.MapGet("/clients/{id:int}", 
+  async (int id, IJurisRepository repo) => {
+
+    try {
+      var client = await repo.GetClientAsync(id);
+      if (client == null) return Results.NotFound();
+      return Results.Ok(client);
+    }
+    catch (Exception ex)
+    {
+      logger?.LogError("Failed while reading database: {message}", ex.Message);
+    }
+    return Results.BadRequest("Failed");
+  });
+
+app.Run(); 
