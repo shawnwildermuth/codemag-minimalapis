@@ -12,7 +12,6 @@
       "stopAtEntry": false,
       "serverReadyAction": {
         "action": "openExternally",
-        "uriFormat": "http://localhost:%s/clients",
         "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
       },
       "env": {

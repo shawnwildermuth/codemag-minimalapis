@@ -6,5 +6,7 @@ public class Client
   public string Name { get; set; } = "";
   public string? Phone { get; set; }
   public string? Contact { get; set; }
-  public Address? Address { get; set; }
+  public Address Address { get; set; } = new Address();
+
+  public ICollection<Case>? Cases { get; set; }
 }

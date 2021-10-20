@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zOpCE8C5D1cJDVOlLNCfq9eGF98TmT26abiqT0tiOvmT1QXg5ONXc5Yp9fyTAGx0o+Jdw/Y4p5BAshlTS4v9Kw==",
+  "dgSpecHash": "Jk77gp+czRofhuS5w/EZhs6zlKDx2pi8PljfZdgh7od+np0IweqpADEXBezor5mRYcdFxpPCCTUuUjDSoNoIxg==",
   "success": true,
   "projectFilePath": "C:\\Users\\shawn\\writing\\CoDeMag\\minimalApis\\demo\\MinimialApis.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\shawn\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\shawn\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\shawn\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\shawn\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.3\\microsoft.data.sqlclient.2.1.3.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0-rc.2.21480.5\\microsoft.entityframeworkcore.6.0.0-rc.2.21480.5.nupkg.sha512",
@@ -35,6 +37,7 @@
     "C:\\Users\\shawn\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0-rc.2.21480.5\\system.diagnostics.diagnosticsource.6.0.0-rc.2.21480.5.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.8.0\\system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512",
+    "C:\\Users\\shawn\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-rc.2.21480.5\\system.runtime.compilerservices.unsafe.6.0.0-rc.2.21480.5.nupkg.sha512",
     "C:\\Users\\shawn\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",

@@ -32,10 +32,16 @@ public class JurisRepository : IJurisRepository
 
   public async Task<bool> HasClientAsync(int id) => await _context.Clients.CountAsync(c => c.Id == id) > 0;
 
+  public async Task<IEnumerable<Case>> GetClientCases(int id)
+  {
+    return await _context.Cases
+      .Where(c => c.Client.Id == id)
+      .ToListAsync();
+  }
+
   public async Task<bool> SaveAll() => (await _context.SaveChangesAsync()) > 0;
   public void Add<T>(T entity) where T : class => _context.Add(entity);
   public void Delete<T>(T entity) where T : class => _context.Remove(entity);
   public void Update(Client existingClient) => _context.Update(existingClient);
-
 
 }

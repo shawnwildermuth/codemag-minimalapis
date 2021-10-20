@@ -14,6 +14,7 @@ public class JurisContext : DbContext
 
   public DbSet<Client> Clients => Set<Client>();
   public DbSet<Address> Addresses => Set<Address>();
+  public DbSet<Case> Cases => Set<Case>();
 
   protected override void OnConfiguring(DbContextOptionsBuilder bldr)
   {
