@@ -8,11 +8,12 @@ RegisterServices(bldr.Services);
 
 var app = bldr.Build();
 
-app.Services.GetRequiredService<ClientsApi>().Register(app);
-app.Services.GetRequiredService<CasesApi>().Register(app);
+foreach (var api in app.Services.GetServices<IApi>())
+{
+  api.Register(app);
+}
 
 app.Run();
-
 
 void RegisterServices(IServiceCollection svc)
 {
@@ -21,7 +22,17 @@ void RegisterServices(IServiceCollection svc)
                   JurisRepository>();
   svc.AddAutoMapper(Assembly.GetEntryAssembly());
 
-  svc.AddTransient<ClientsApi>();
-  svc.AddTransient<CasesApi>();
+  var apiTypes = Assembly.GetCallingAssembly()
+    .DefinedTypes.Where(t =>
+      typeof(IApi)
+        .IsAssignableFrom(t) &&
+        !t.IsInterface &&
+        !t.IsAbstract)
+    .ToList();
+
+  foreach (var theType in apiTypes)
+  {
+    svc.AddTransient(typeof(IApi), theType);
+  }
 
 }

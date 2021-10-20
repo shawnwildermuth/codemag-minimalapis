@@ -1,6 +1,6 @@
 ﻿namespace MinimialApis.Apis;
 
-public class ClientsApi
+public class ClientsApi : IApi
 {
   private readonly ILogger<ClientsApi> _logger;
   private readonly IMapper _mapper;
@@ -115,7 +115,7 @@ public class ClientsApi
     {
       var client =
         await repo.GetClientAsync(id);
-    
+
       if (client == null)
       {
         return Results.NotFound();

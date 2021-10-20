@@ -1,6 +1,6 @@
 ﻿namespace MinimialApis.Apis;
 
-public class CasesApi
+public class CasesApi : IApi
 {
   public void Register(IEndpointRouteBuilder app)
   {
