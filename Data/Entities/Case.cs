@@ -17,5 +17,5 @@ public class Case
   public string FileNumber { get; set; } = "";
   public CaseStatus Status { get; set; }
 
-  public Client? Client {get;set;}
+  public Client? Client { get; set; }
 }
